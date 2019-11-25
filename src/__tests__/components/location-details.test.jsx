@@ -1,6 +1,6 @@
 import React from 'react';
 import Enyzyme from 'enzyme';
-import LocationDetails from '../../src/components/location-details';
+import LocationDetails from '../components/location-details';
 
 describe('Component', () => {
     it('renders the passed city and country in a h1 tag', () => {

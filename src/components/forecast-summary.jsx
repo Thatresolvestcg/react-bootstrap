@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 
 const ForecastSummary = props => (
     <div>
-        hello worlds
+        <p>{props.date}</p>
+        <p>{props.description}</p>
+        <p>{props.icon}</p>
+        <p>{props.temperature}</p>
     </div>
 );
 

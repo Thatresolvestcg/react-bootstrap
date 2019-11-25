@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ForecastSummary from '../../src/components/forecast-summary';
+import ForecastSummary from '../components/forecast-summaries.jsx';
 
 it('renders the date', () => {
     const wrapper = shallow((
