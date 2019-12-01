@@ -4,11 +4,12 @@ import WeatherIcon from 'react-icons-weather';
 
 
 const ForecastSummary = props => (
-    <div className='forecast-summary__icon'>
-        <WeatherIcon name="owm" iconId={props.icon} />
+    <div>
+        <div className="forecast-summary__icon">
+            <WeatherIcon name="owm" iconId={props.icon} />
+        </div>
         <p>{props.date}</p>
         <p>{props.description}</p>
-        <p>{props.icon}</p>
         <p>{props.temperature}</p>
     </div>
 );
