@@ -2,32 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
-import '../styles/app.css'
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            selectedDate: this.props.forecasts[0].date,
-        };
-    }
-
     render() {
-        const selectedForecast = this.props.forecasts.find(forecast => forecast.date === this.state.selectedDate);
-
         return (
-            <div className="forecast">
+            <div className='forecast'>
                 <LocationDetails
-                    city={props.location.city}
-                    country={props.location.country}
+                    city={this.props.location.city}
+                    country={this.props.location.country}
                 />
-                <ForecastSummaries forecasts={props.forecasts} />
-                <ForecastDetails forecast={selectedForecast} />
+                <ForecastSummaries forecasts={this.props.forecasts} />
+                <forecastDetails forecast={this.props.forecasts[0]} />
+
             </div>
-        );
+        )
     }
 }
+
+
 App.propTypes = {
     location: PropTypes.shape({
         city: PropTypes.string,
