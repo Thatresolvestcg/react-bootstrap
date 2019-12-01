@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WeatherIcon from 'react-icons-weather';
 
 
 const ForecastSummary = props => (
-    <div>
+    <div className='forecast-summary__icon'>
+        <WeatherIcon name="owm" iconId={props.icon} />
         <p>{props.date}</p>
         <p>{props.description}</p>
         <p>{props.icon}</p>
