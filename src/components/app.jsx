@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
+import ForecastDetails from './forecast-details';
 import '../styles/app.css'
 
 class App extends React.Component {
@@ -27,7 +28,7 @@ class App extends React.Component {
                     country={this.props.location.country}
                 />
                 <ForecastSummaries forecasts={this.props.forecasts} />
-                <forecastDetails forecast={selectedForecast} />
+                <ForecastDetails forecast={selectedForecast} />
 
             </div>
         )
