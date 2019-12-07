@@ -16,6 +16,7 @@ const ForecastSummary = props => (
         </div>
         <p>{props.description}</p>
         <p>{props.temperature}</p>
+        <button onClick={() => console.log('hello')} >More Details</button>
     </div>
 );
 

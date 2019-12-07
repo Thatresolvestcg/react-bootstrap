@@ -2,9 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LocationDetails from './location-details';
 import ForecastSummaries from './forecast-summaries';
+import '../styles/app.css'
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            selectedDate: this.props.forecasts[0].date,
+        };
+    }
+    handleForecastSelect(date) {
+        this.setState({
+            selectedDate: date,
+        });
+    }
     render() {
+        const selectedForecast = this.props.forecasts.find(forecast => forecast.date === this.state.selectedDate);
+
         return (
             <div className='forecast'>
                 <LocationDetails
@@ -12,7 +27,7 @@ class App extends React.Component {
                     country={this.props.location.country}
                 />
                 <ForecastSummaries forecasts={this.props.forecasts} />
-                <forecastDetails forecast={this.props.forecasts[0]} />
+                <forecastDetails forecast={selectedForecast} />
 
             </div>
         )

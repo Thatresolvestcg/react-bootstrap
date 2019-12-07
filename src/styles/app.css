@@ -1,3 +1,8 @@
+body {
+    background-color: #fdfff5;
+    color: #080808;
+}
+
 .forecast {
     margin: 0px, 20px, 0px, 20px;
     font-family: Arial, Helvetica, sans-serif;
