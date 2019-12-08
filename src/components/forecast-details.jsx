@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 class ForecastDetails extends React.Component {
@@ -12,6 +13,15 @@ class ForecastDetails extends React.Component {
             <p className='humidity'>Humidity: {this.props.forecast.humidity}</p>
         </div>;
     }
+};
+
+ForecastDetails.propTypes = {
+    detailedDate: PropTypes.array.isRequired,
+    maxTemp: PropTypes.number.isRequired,
+    minTemp: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
+    windSpeed: PropTypes.number.isRequired,
+    windDirectionx: PropTypes.number.isRequired,
 };
 
 export default ForecastDetails;

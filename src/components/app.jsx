@@ -8,14 +8,15 @@ import '../styles/app.css'
 class App extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             selectedDate: this.props.forecasts[0].date,
         };
+        this.handleForecastSelect = this.handleForecastSelect.bind(this);
     }
     handleForecastSelect(date) {
         this.setState({
             selectedDate: date,
+
         });
     }
     render() {
